@@ -3,16 +3,19 @@ package record;
 import java.util.Scanner;
 
 public class titik {
-	int x, y;
+	private int x;
+	private int y;
 
 	public static void main(String[] args) {
-		titik T = new titik();
+		titik t = new titik();
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("x :");
-		T.x = sc.nextInt();
-		System.out.print("y :");
-		T.y = sc.nextInt();
-		System.out.println("Titik : (" + T.x + ", " + T.y + ")");
+		System.out.print("x: ");
+		t.x = sc.nextInt();
+		System.out.print("y: ");
+		t.y = sc.nextInt();
+		System.out.println("titik: (" + t.x + ", " + t.y + ")");
+
+		sc.close();
 	}
 }

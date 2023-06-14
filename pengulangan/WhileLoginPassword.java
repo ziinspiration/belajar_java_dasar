@@ -3,17 +3,20 @@ package pengulangan;
 import java.util.Scanner;
 
 public class WhileLoginPassword {
-	public static void main (String[] args) {
-		String Pass;
-		
-		Scanner sc=new Scanner (System.in);
-		System.out.print("Your Password :") ;Pass=sc.nextInt();
-				
-		
-		while (!Pass.contentEquals("$$$")) {
-		System.out.print("Your Password :") ;Pass=sc.nextInt();
-		
+	public static void main(String[] args) {
+		String pass;
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Your Password: ");
+		pass = sc.nextLine();
+
+		while (!pass.equals("$$$")) {
+			System.out.print("Your Password: ");
+			pass = sc.nextLine();
 		}
-		System.out.println("Login Succes") ;
-    }
+
+		System.out.println("Login Success");
+
+		sc.close();
+	}
 }

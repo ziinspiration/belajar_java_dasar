@@ -3,22 +3,27 @@ package pengulangan;
 import java.util.Scanner;
 
 public class WhileHitungRata {
-	public static void main (String[] args) {
-		int JumlahMhs;
-		float Nilai;
-		
-		Scanner sc=new Scanner (System.in);
-		System.out.print("Jumlah Mahasiswa :") ;JumlahMhs=sc.nextInt();
-				
-		int i=1;
-		float k=0;
-		while (i<=JumlahMhs) {
-			System.out.print("Nilai Mahsiswa ke "+i+": ") ;Nilai=sc.nextInt();
-			k=k+Nilai;
-			i =i+1 ;		
+	public static void main(String[] args) {
+		int jumlahMhs;
+		float nilai;
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Jumlah Mahasiswa: ");
+		jumlahMhs = sc.nextInt();
+
+		int i = 1;
+		float totalNilai = 0;
+		while (i <= jumlahMhs) {
+			System.out.print("Nilai Mahasiswa ke-" + i + ": ");
+			nilai = sc.nextFloat();
+			totalNilai += nilai;
+			i++;
 		}
-		System.out.println("Total Nilai ="+k) ;
-		float Rata=k/JumlahMhs;
-		System.out.println("Nilai Rata-Rata ="+Rata) ;
-    }
+
+		System.out.println("Total Nilai = " + totalNilai);
+		float rata = totalNilai / jumlahMhs;
+		System.out.println("Nilai Rata-Rata = " + rata);
+
+		sc.close();
+	}
 }

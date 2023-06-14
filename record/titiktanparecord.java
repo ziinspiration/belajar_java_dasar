@@ -3,24 +3,22 @@ package record;
 import java.util.Scanner;
 
 public class titiktanparecord {
-
-	public static void main(String[] args) {
-		Titik T = new Titik();
-
-		Scanner sc = new Scanner(System.in);
-		System.out.print("x : ");
-		T.setX(sc.nextInt());
-		System.out.print("y : ");
-		T.setY(sc.nextInt());
-
-		System.out.println("Titik : (" + T.getX() + ", " + T.getY() + ")");
-	}
-
-}
-
-class Titik {
 	private int x;
 	private int y;
+
+	public static void main(String[] args) {
+		titiktanparecord t = new titiktanparecord();
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("x: ");
+		t.setX(sc.nextInt());
+		System.out.print("y: ");
+		t.setY(sc.nextInt());
+
+		System.out.println("Titik: (" + t.getX() + ", " + t.getY() + ")");
+
+		sc.close();
+	}
 
 	public int getX() {
 		return x;

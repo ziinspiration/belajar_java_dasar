@@ -4,12 +4,12 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Mahasiswa {
-    String NRP;
-    String Nama;
-    Float UTS, UAS, Prak, Quiz, Tgs, Hdr, NA;
-    char Idx;
+    private String NRP;
+    private String Nama;
+    private float UTS, UAS, Prak, Quiz, Tgs, Hdr, NA;
+    private char Idx;
 
-    void BacaMhs() {
+    public void BacaMhs() {
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
         System.out.print("NRP: ");
         NRP = sc.nextLine();
@@ -27,9 +27,10 @@ public class Mahasiswa {
         Tgs = sc.nextFloat();
         System.out.print("Kehadiran: ");
         Hdr = sc.nextFloat();
+        sc.close();
     }
 
-    void TampilMhs() {
+    public void TampilMhs() {
         System.out.println("Data Mahasiswa: ");
         System.out.println("NRP: " + NRP);
         System.out.println("Nama: " + Nama);
@@ -37,7 +38,7 @@ public class Mahasiswa {
         System.out.println("Indeks Nilai: " + Idx);
     }
 
-    void HitungNa() {
+    public void HitungNa() {
         double Nas;
 
         Nas = 0.3 * UTS + 0.3 * UAS + 0.2 * Prak + 0.1 * Quiz + 0.1 * Tgs + 0.1 * Hdr;
